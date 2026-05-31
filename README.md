@@ -4,7 +4,7 @@ End-to-end ML pipeline that predicts telecom customer churn using XGBoost, Mongo
 
 ## Live Demo
 
-Deploy with Streamlit Community Cloud, then add your app URL here.
+https://churnpredictionprojectgit-2pb9ahyzn6uabmfvgpzqgc.streamlit.app/
 
 ## Model Performance
 
@@ -34,55 +34,5 @@ churn_prediction_project/
 ├── models/churn_model.pkl
 └── data/raw/
 ```
-
-## Local Setup
-
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
-### Run the pipeline
-
-```powershell
-python src/data_ingestion.py
-python src/model_training.py
-```
-
-### Run the demo app locally
-
-```powershell
-streamlit run app.py
-```
-
-## Deploy to Streamlit Community Cloud (Free)
-
-1. Push this repo to GitHub (make sure `.env` is **not** committed).
-2. Go to [share.streamlit.io](https://share.streamlit.io).
-3. Sign in with GitHub.
-4. Click **New app**.
-5. Select your repo, branch `main`, and main file `app.py`.
-6. Click **Deploy**.
-
-Streamlit will install `requirements.txt` and host the app at a URL like:
-
-`https://your-app-name.streamlit.app`
-
-## Environment Variables
-
-MongoDB is only needed for the training/ingestion pipeline locally. The Streamlit demo uses the saved model file and does **not** require `MONGO_URI`.
-
-Create a local `.env` file for ingestion/training:
-
-```env
-MONGO_URI="your_mongodb_connection_string"
-```
-
-## Portfolio Highlights
-
-- Full ML pipeline from raw data to deployment
-- Feature engineering with domain-specific variables
-- Hyperparameter tuning and threshold optimization
 - MongoDB feature store integration
 - Explainability with SHAP during training
