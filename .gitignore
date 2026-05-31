@@ -1,0 +1,39 @@
+# Environment and secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated data (reproducible via data_ingestion.py)
+data/processed/
+
+# Logs and caches
+*.log
+.cache/
+.pytest_cache/
